@@ -1,0 +1,18 @@
+<div class="row">
+  <img class ="col s12 m6 l3 responsive-img" src="../assets/Cute-Dog-Names-HP-long.jpg">
+  <img class ="col s12 m6 l3 responsive-img" src="../assets/samoiedo.jpg">
+  <img class ="col s12 m6 l3 responsive-img" src="../assets/shitzu.jpg">
+  <img class ="col s12 m6 l3 responsive-img" src="../assets/Teacup-Pomeranian-White.jpg">  
+</div>
+<button mat-button>Click me!</button>
+
+
+  <mat-form-field>
+    <input type="text" placeholder="Pick one" matInput [formControl]="myControl" [matAutocomplete]="auto">
+    <mat-autocomplete #auto="matAutocomplete">
+      <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+        {{option}}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+
